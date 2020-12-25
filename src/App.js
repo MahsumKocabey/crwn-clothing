@@ -1,33 +1,20 @@
-// import logo from './logo.svg';
-import React, { Component } from 'react';
-import HomePage from './pages/homepage/homepage.component';
-import './App.css'
+import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
+import './App.css';
 
+import HomePage from './pages/homepage/homepage.component';
+import ShopPage from './pages/shop/shop.component.jsx';
 
-class App extends Component {
-  constructor(){
-    super();
-
-    this.state = {
-
-    }
-    /* Commented this bind out because we call es6 arrow function for the handleChange method. */
-    // this.handleChange = this.handleChange.bind(this);
-  }
-
-
-  render(){
-
-    return (
-      <div>
+function App() {
+  return (
+    <div>
       <Switch>
-        <Route exact path="/" component={HomePage} />
+        <Route exact path='/' component={HomePage} />
+        <Route path='/shop' component={ShopPage} />
       </Switch>
-      </div>
-    )
-  }
+    </div>
+  );
 }
 
 export default App;
