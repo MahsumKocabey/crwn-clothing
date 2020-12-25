@@ -2,6 +2,9 @@
 import React, { Component } from 'react';
 import HomePage from './pages/homepage/homepage.component';
 import './App.css'
+import { Switch, Route } from 'react-router-dom';
+
+
 
 class App extends Component {
   constructor(){
@@ -19,7 +22,9 @@ class App extends Component {
 
     return (
       <div>
-        <HomePage />
+      <Switch>
+        <Route exact path="/" component={HomePage} />
+      </Switch>
       </div>
     )
   }
